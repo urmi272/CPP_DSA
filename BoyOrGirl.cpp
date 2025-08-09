@@ -1,23 +1,20 @@
 #include <iostream>
 #include <string>
+#include <set>
 using namespace std;
 
 int main(){
     string s;
     cin>> s;
-    int n = s.length();
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (s[i] == s[j]) {
-                n--;
-                break;
-            }
-        }
+    set<char> unique_chars;
+    for(char c : s) {
+        unique_chars.insert(c);
     }
-    if (n % 2 == 0){
+    if(unique_chars.size() % 2 == 0) {
         cout << "CHAT WITH HER!" << endl;
-    }
-    else {
+    } else {
         cout << "IGNORE HIM!" << endl;
     }
+    return 0;
+
 }
