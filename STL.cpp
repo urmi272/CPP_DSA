@@ -173,8 +173,45 @@ void Uset(){
     unordered_set<int> st;
 }
 
-//Map
+//Map ----> unique keys that has a value
 #include <map>
 void explainMap(){
-    
+    map<int,int> m;
+    map<int, pair<int,int>> m;
+    map<pair<int,int>, int> m2;
+
+    m[1]= 2;
+    m.emplace(3, 1);
+    m.insert(2,4);
+
+    m2[{2,3}]=10;
+
+    cout<< m[1]; //2
+    cout<< m[5]; //0 null
+
+    auto it = m.find(3);
+    cout << it->second; //1
+}
+
+//****Algorithms****
+
+bool comp(pair<int,int> p1, pair<int,int> p2){
+    if(p1.second < p2.second) return true;
+    if(p1.second > p2.second) return false;
+    //they are equal
+    if(p1.first>p2.first) return true;
+    return false;
+}
+
+#include <algorithm>
+void Explain(){
+    int n; cin>>n;
+    int a[n] = {2,25,63, 34, 6, 4,7};
+    sort(a, a+n); //for array
+    vector <int> v;
+    sort(v.begin(), v.end()); //for vector
+    sort(a, a+n, greater<int>()); //in decending order
+    sort(a, a+n, comp); //my way sorting
+
+    cout << *max_element(a, a+n);
 }
