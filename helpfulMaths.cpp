@@ -10,7 +10,7 @@ int main(){
     vector<int> numbers;
     for (char c : s) {
         if (c >= '1' && c <= '3') {
-            numbers.push_back(c - '0');
+            numbers.push_back(c - '0'); // Convert char to int
         }
     }
     
