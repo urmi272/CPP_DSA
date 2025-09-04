@@ -4,10 +4,23 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    string s[n];
-    for(int i = 0; i < n; i++){
-        cin >> s[i];
+    int x = 0;
+    while(n--){
+        string s;
+        cin >> s;
+        if(s[0] == '+'){
+            ++x;
+        }
+        if(s[0] == '-'){
+            --x;
+        }
+        if(s[2] == '+'){
+            x++;
+        }
+        if(s[2] == '-'){
+            x--;
+        }
     }
-    int count = 0;
-    
+    cout<<x;
+    return 0;
 }
