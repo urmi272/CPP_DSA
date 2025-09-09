@@ -12,6 +12,7 @@ bool checkHello(string s){
             return true;
         }
     }
+    return false;
 }
 int main(){
     string s;
