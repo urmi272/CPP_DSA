@@ -10,15 +10,15 @@ int main() {
             }
         } else {
             if (i % 4 == 1) {
-                cout << '#';
-                for (int j = 1; j < m; j++) {
-                    cout << '.';
-                }
-            } else {
                 for (int j = 0; j < m - 1; j++) {
                     cout << '.';
                 }
                 cout << '#';
+            } else {
+                cout << '#';
+                for (int j = 1; j < m; j++) {
+                    cout << '.';
+                }
             }
         }
         cout << endl;
