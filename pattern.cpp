@@ -4,7 +4,7 @@ using namespace std;
 /*note if ur starting from 1 then use < instead of <= */
 
 void print1(int n){ // n/i -> rows, m/j -> columns
-    for (int i= 0; i< n; i++){          // *****
+    for (int i= 0; i< n; i++){          // ***** n = 5
         for (int j = 0; j< n; j++){     // *****   
             cout<<"*";                  // *****
         }                               // *****
