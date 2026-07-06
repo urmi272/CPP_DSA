@@ -128,8 +128,8 @@ Node* removeEle(Node* head, int ele){
             delete temp; // Free the memory of the deleted node
             break;
         }
-        prev = temp;
-        temp = temp->next;
+        prev = temp; // Update the previous pointer
+        temp = temp->next; // Move to the next node
     }
     
     return head; // If k is out of bounds, return the original list
